@@ -1,0 +1,23 @@
+# Hybrid BiLSTM classifier (Section 3.4).
+# Passed as **kwargs to saga.training.train_classifier.train_classifier.
+
+d_in: 12                # per-window feature dimension (saga.features.error_curve)
+d_model: 128
+n_layers: 3
+d_embed: 128
+n_classes: 4
+dropout: 0.2
+sync_dim: 2              # set to 0 (or omit --sync-features) for open-set deployment
+
+max_windows: 16
+tau_k: 1.5
+
+lr: 2.0e-4
+weight_decay: 1.0e-4
+warmup_epochs: 15
+epochs: 120
+batch_size: 32
+triplet_margin: 0.5
+triplet_weight: 0.5
+focal_gamma: 2.0
+seed: 42

@@ -1,0 +1,26 @@
+# Core
+torch>=2.1
+torchvision>=0.16
+numpy>=1.24
+scipy>=1.11
+scikit-learn>=1.3
+pandas>=2.0
+PyYAML>=6.0
+
+# Encoders
+timm>=1.0
+transformers>=4.40
+
+# Cross-modal predictors (GPU only; falls back to a GRU on CPU if absent)
+mamba-ssm>=2.0; platform_system == "Linux"
+
+# Video / audio I/O
+decord>=0.6
+opencv-python>=4.8
+soundfile>=0.12
+librosa>=0.10
+python_speech_features>=0.6
+
+# Plotting / analysis (figure generation, t-SNE)
+matplotlib>=3.7
+tqdm>=4.66

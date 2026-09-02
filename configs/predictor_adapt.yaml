@@ -1,0 +1,22 @@
+# Domain-matched cross-modal predictor adaptation (Section 3.1).
+# Passed as **kwargs to saga.training.adapt_predictor.train_predictors.
+
+proj_dim: 384          # shared encoder projection dimension
+d_state: 16            # Mamba SSM state dimension
+d_conv: 4              # Mamba local convolution width
+expand: 2               # Mamba inner-dimension expansion factor
+n_layers: 2             # stacked Mamba layers per predictor branch
+dropout: 0.1
+
+window_frames: 16       # 0.64s at 25fps
+stride_frames: 8
+n_samples: 2000          # candidate windows subsampled down to this many
+
+lr: 1.0e-3
+weight_decay: 1.0e-4
+warmup_epochs: 3
+epochs: 30
+batch_size: 16
+clip_grad: 0.5
+calibration_weight: 0.01
+seed: 42

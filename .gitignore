@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+
+# Data / caches / checkpoints (not redistributed — see README for how to regenerate)
+data/cached_errors*/
+data/*.csv
+data/*.json
+runs/
+results/
+external/syncnet/*.model
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
