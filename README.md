@@ -2,6 +2,23 @@
 
 **Domain-Matched Predictor Adaptation and Off-the-Shelf Audio-Visual Synchrony Scoring for Deepfake Attribution**
 
+**Authors:** Wasim Ahmad<sup>1</sup>, Naeem Ul Islam<sup>2</sup>, Kiran Saleem<sup>3</sup>, Muhammad Khalid<sup>4</sup>
+
+<sup>1</sup> School of Interdisciplinary Science, Beijing Institute of Technology, Beijing, China  
+<sup>2</sup> Department of Computer Science and Engineering, Yuan Ze University, Taoyuan, Taiwan  
+<sup>3</sup> Department of Computer Science, College of Computing and Informatics, University of Sharjah, Sharjah, UAE  
+<sup>4</sup> School of Digital and Physical Sciences, University of Hull, Hull, UK
+
+**Corresponding authors:** Naeem Ul Islam, Wasim Ahmad
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23387395.svg)](https://doi.org/10.5281/zenodo.23387395)
+
+## Abstract
+
+Cross-modal prediction residuals from frozen audio-visual predictors trained only on real content have been proposed for zero-shot deepfake attribution, without any fake training data. We show this signal is highly sensitive to an uncontrolled factor: domain match between the corpus used to adapt the predictors and the evaluation data. A mismatched adaptation corpus collapses attribution to near chance; adapting on the evaluation dataset's own real clips restores it, an effect verified bidirectionally between FakeAVCeleb and LAV-DF (Random Forest AUC: 69.1 versus 66.4 percent in- versus out-of-domain on FakeAVCeleb, 55.4 versus 48.1 percent on LAV-DF). We then test whether an off-the-shelf, zero-training synchrony scorer (SyncNet) adds complementary signal. It substantially improves closed-set attribution (AUC 69.1 to 73.3 percent, macro F1 33.4 to 43.3 percent) but consistently reduces open-set AUROC for an unseen generator, a tradeoff replicated across three classifiers and explained mechanistically. Notably, Logistic Regression outperforms both Random Forest and a purpose-built temporal BiLSTM on closed-set and identity-disjoint protocols, with one notable exception to the tradeoff that we report rather than omit. We evaluate across four protocols, random-split, identity-disjoint, and two open-set generator hold-outs, and recommend deployment configurations for each.
+
+## Overview
+
 This repository contains the reference implementation accompanying the paper of the same name. SAGA attributes a manipulated audio-visual clip to its generating method (not just "real" vs. "fake") using two complementary, largely training-data-free signal sources:
 
 1. **Domain-matched cross-modal predictors.** Two small Mamba-based predictors, `T_a2v` and `T_v2a`, are trained on *real, unmanipulated clips only* to predict one modality's frozen features (DINOv2 for video, wav2vec2 for audio) from the other's. No fake data is used to train them. The paper's central methodological finding is that this only works if the predictors are adapted on the *evaluation dataset's own* real training clips — adapting on a different dataset and applying the predictors zero-shot causes the resulting signal to collapse toward chance.
