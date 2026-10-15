@@ -1,0 +1,13 @@
+{
+  "title": "SAGA: Domain-Matched Predictor Adaptation and Off-the-Shelf Audio-Visual Synchrony Scoring for Deepfake Attribution (code)",
+  "upload_type": "software",
+  "description": "Reference implementation accompanying the manuscript \"SAGA: Domain-Matched Predictor Adaptation and Off-the-Shelf Audio-Visual Synchrony Scoring for Deepfake Attribution\", submitted to Applied Artificial Intelligence. Includes domain-matched real-only cross-modal predictor adaptation, error-curve and SyncNet feature extraction, the RF-300 / Logistic Regression / Hybrid BiLSTM classifiers, and the evaluation scripts (closed-set, identity-disjoint, open-set, significance, latency). Datasets (FakeAVCeleb, DF-TIMIT, LAV-DF) are not redistributed.",
+  "creators": [
+    {"name": "Ahmad, Wasim", "affiliation": "Beijing Institute of Technology"},
+    {"name": "Ul Islam, Naeem", "affiliation": "Yuan Ze University"},
+    {"name": "Saleem, Kiran", "affiliation": "University of Sharjah"}
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": ["deepfake attribution", "audio-visual forensics", "cross-modal prediction", "SyncNet", "open-set recognition"]
+}

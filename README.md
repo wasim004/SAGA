@@ -128,4 +128,4 @@ For the identity-disjoint protocol, produce a metadata CSV whose `split` column 
 
 ## License
 
-MIT — see `LICENSE`. Third-party components retain their own licenses (see above).
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) — see `LICENSE`. Third-party components retain their own licenses (the SyncNet code in `external/syncnet/` stays MIT; see above).
