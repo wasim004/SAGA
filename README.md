@@ -9,7 +9,7 @@
 <sup>3</sup> Department of Computer Science, College of Computing and Informatics, University of Sharjah, Sharjah, UAE  
 <sup>4</sup> School of Digital and Physical Sciences, University of Hull, Hull, UK
 
-**Corresponding authors:** Naeem Ul Islam, Wasim Ahmad
+**Corresponding author:** Muhammad Khalid · **Co-corresponding author:** Wasim Ahmad
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23387395.svg)](https://doi.org/10.5281/zenodo.23387395)
 
